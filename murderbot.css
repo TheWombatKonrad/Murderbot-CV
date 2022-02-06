@@ -1,0 +1,163 @@
+body {
+  background-image: url("background.webp");
+  background-attachment: fixed;
+  background-size: 100%
+}
+
+/*TEXT STUFF*/
+h2 {
+  text-align: center;
+}
+
+footer h2 {
+  text-align: left;
+}
+
+/*FIXED STUFF*/
+
+header {
+  max-width: 100%;
+  margin: 10px;
+
+  background: rgb(46, 45, 45);
+  border: 2px solid black;
+
+  color: rgb(208, 210, 214);
+  text-align: center;
+  font-family: sans-serif;
+}
+
+footer{
+  max-width: 100%;
+  min-height: 100px;
+  margin: 10px;
+
+
+  background: rgb(74, 69, 69);
+  border: 2px solid black;
+  padding-left: 10px;
+}
+
+.container {
+  margin: 10px;
+}
+
+/*RESPONSIVE STUFF*/
+
+@media only screen and (max-width: 640px) {
+.container{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.item{
+  flex: 1 1 auto;
+}
+
+img {
+  height: 300px;
+}
+}/*media*/
+
+@media only screen and (min-width: 640px) and (max-width: 1000px){
+.container {
+  display: grid;
+  grid-template-rows: 300px 50px 250px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  'bio photo'
+  'quote quote'
+  'edu we';
+
+  grid-gap: 10px;
+
+}/*media*/
+
+#photo {
+  grid-area: photo;
+  border: 2px solid black;
+}
+
+img {
+  height: 300px;
+}
+
+}/*media*/
+
+@media only screen and (min-width: 1000px){
+  .container {
+    display: grid;
+    grid-template-rows: 50px 200px 200px 200px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    'quote quote'
+    'bio photo'
+    'edu photo'
+    'we photo';
+
+    grid-gap: 10px;
+  }
+
+  #photo {
+    grid-area: photo;
+    border: 2px solid black;
+  }
+
+  img {
+    height: 620px;
+  }
+
+}/*MEDIA*/
+
+
+img {
+  width: 100%;
+  object-fit: none;
+  object-position: 50% 31%;
+}
+
+#quote {
+  grid-area: quote;
+
+  max-width: 100%;
+  max-height: 50px;
+  background: rgb(74, 69, 69);
+  border: 2px solid black;
+
+  text-align: center;
+}
+
+
+#bio {
+  grid-area: bio;
+
+  max-width: 100%;
+  min-height: 100px;
+  background: rgb(74, 69, 69);
+  border: 2px solid black;
+}
+
+#edu {
+  grid-area: edu;
+
+  max-width: 100%;
+  min-height: 100px;
+  background: rgb(74, 69, 69);
+  border: 2px solid black;
+}
+
+#we{
+  grid-area: we;
+
+  max-width: 100%;
+  min-height: 100px;
+  background: rgb(74, 69, 69);
+  border: 2px solid black;
+  padding-left: 5px;
+}
+
+#we p {
+  max-width: 500px;
+  padding-left: 1em;
+}
